@@ -4,6 +4,10 @@ import Home from './pages/home';
 import SceneEnvironment from './pages/SceneEnvironment';
 import About from './pages/About';
 import Header from './components/Header';
+import ProjectIntro from './pages/ProjectIntro';
+import Project from './pages/Project';
+import projectList from './data/projectList';
+
 
 function App() {
 
@@ -19,6 +23,10 @@ function App() {
       <div className='absolute top-0 left-0'>
         <Home />
         <About />
+        <ProjectIntro />
+        { projectList.map((data, i) => (
+           <Project data={data} id={i}/>
+        ))}
       </div>
       <Header />
     </>
