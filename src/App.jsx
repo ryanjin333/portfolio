@@ -25,7 +25,7 @@ function App() {
         <About />
         <ProjectIntro />
         { projectList.map((data, i) => (
-           <Project data={data} id={i}/>
+           <Project data={data} id={i} key={i}/>
         ))}
       </div>
       <Header />

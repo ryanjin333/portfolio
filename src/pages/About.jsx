@@ -1,6 +1,19 @@
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
+    const pRef = useRef();
+
+    useEffect(() => {
+        gsap.from(pRef.current, {duration: 1, opacity: 1,  stagger: 0.025, ease: "inOut", scrollTrigger: {
+            trigger: pRef.current,
+        }})
+    }, [])
     return (
-        <section className="w-screen h-screen flex items-center" id="about">
+        <section className="w-screen h-screen flex items-center" ref={pRef} id="about">
             <h1 className='text-gray-200 text-6xl font-bold mx-48'>
                 <span className="text-lg font-light">Over these past two years, I have been</span><br />
                 working with

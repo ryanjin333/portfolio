@@ -6,7 +6,7 @@ const Home = () => {
             <h1 className='text-gray-200 text-8xl font-extrabold m-32'>
                 Hi,<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600">I'm Ryan.</span>
-                <p className="text-gray-300 font-light text-lg my-8">Frontend and app developer</p>
+                <p className="text-gray-300 font-light text-lg my-8">Frontend/App Developer</p>
             </h1>
         </section>
     )
