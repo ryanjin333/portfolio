@@ -29,7 +29,7 @@ const SphereObject = ({sphere, node}) => {
 
     return (
         <>
-            <Float castShadow receiveShadow floatIntensity={10} speed={5} position={coord}>
+            <Float floatIntensity={10} speed={5} position={coord}>
                 <Clone ref={sphereRef} object={node}/>
             </Float>
         </>

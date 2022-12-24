@@ -7,6 +7,8 @@ import Light from '../components/Scene/Light';
 import Camera from '../components/Scene/Camera';
 import SphereObject from '../components/Scene/SphereObject';
 import sphereObjectsList from '../data/sphereObjectsList';
+import Earth from '../components/Scene/Earth';
+import MacBook from '../components/Scene/MacBook';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,7 +24,9 @@ const HomeScene = () => {
             { sphereObjectsList.map((obj, i) => (
                 <SphereObject sphere={obj} node={nodes[obj.name]} key={i}/>
             ))
-            } 
+            }
+            <Earth node={nodes.Earth} />
+            
         </>
     )
 }

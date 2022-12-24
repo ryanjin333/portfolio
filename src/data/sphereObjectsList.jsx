@@ -24,7 +24,7 @@ export default [{
 }, {
     name: "Sphere 5",
     coord: [-306.49, 35.7, -122.39],
-    position: [-1000, 500, 1000],
+    position: [-100, 0, 1000],
     rotation: [2, 2, 4],
 
 }, {

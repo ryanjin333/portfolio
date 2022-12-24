@@ -13,13 +13,13 @@ function App() {
 
   return (
     <>
-      <Suspense fallback={null}>
-        <div className='w-screen h-screen fixed top-0 left-0'>
-          <Canvas shadows flat linear>
-            <SceneEnvironment />
-          </Canvas>
-        </div>
-      </Suspense>
+      <div className='w-screen h-screen fixed top-0 left-0'>
+        <Canvas shadows flat linear>
+        <Suspense fallback={null}>
+          <SceneEnvironment />
+          </Suspense>
+        </Canvas>
+      </div>
       <div className='absolute top-0 left-0'>
         <Home />
         <About />
