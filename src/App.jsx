@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import Home from './pages/home';
 import SceneEnvironment from './pages/SceneEnvironment';
@@ -7,9 +7,19 @@ import Header from './components/Header';
 import ProjectIntro from './pages/ProjectIntro';
 import Project from './pages/Project';
 import projectList from './data/projectList';
+import PageDivider from './components/PageDivider';
+import Loader from './pages/Loader';
 
 
 function App() {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 8000)
+  }, [])
 
   return (
     <>
@@ -22,13 +32,24 @@ function App() {
       </div>
       <div className='absolute top-0 left-0'>
         <Home />
+        <PageDivider />
         <About />
+        <PageDivider />
         <ProjectIntro />
+        <PageDivider />
         { projectList.map((data, i) => (
-           <Project data={data} id={i} key={i}/>
+          <>
+            <Project data={data} id={i} key={i}/>
+            { data.name !== "Day Tracker" &&
+              <PageDivider />
+            }
+          </>
         ))}
       </div>
       <Header />
+      { loading &&
+        <Loader />
+      }
     </>
   )
 }

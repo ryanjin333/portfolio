@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Spline from "@splinetool/react-spline";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import appStoreDownload from '../assets/appStoreDownload.png';
@@ -10,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Project = ({data, id}) => {
 
-    const {name, description, githubLink, appStoreLink, playStoreLink} = data;
+    const {name, description, githubLink, splineLink, appStoreLink, playStoreLink} = data;
 
     useEffect(() => {
         gsap.fromTo(`#app${id}`, {opacity: 0}, {opacity: 1, ease: "power4", scrollTrigger: {
@@ -50,6 +51,7 @@ const Project = ({data, id}) => {
                     </a>
                 </div>
             </h1>
+            <Spline className="w-screen h-screen top-0 left-0" scene={splineLink} />
         </section>
     )
 }

@@ -8,7 +8,7 @@ const Home = () => {
         timeline.fromTo('#greeting', {y: -70, opacity: 0}, {
             y: 0,
             duration: 0.75,
-            delay: 1,
+            delay: 8,
             opacity: 1,
             ease: "power4",
         } )
@@ -30,7 +30,7 @@ const Home = () => {
             <h1 className='text-gray-200 text-8xl font-extrabold m-32'>
                 <div id="greeting">Hi,</div>
                 <div id="name" className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600 h-28">I'm Ryan.</div>
-                <p id="experiance" className="text-gray-300 font-light text-lg my-8 ">Creative app developer</p>
+                <p id="experiance" className="text-gray-400 font-normal text-lg my-8 ">Creative app developer</p>
             </h1>
         </section>
     )
