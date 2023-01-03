@@ -8,9 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 const ProjectIntro = () => {
 
   useEffect(() => {
-    gsap.fromTo("#myProject", {opacity: 0}, {opacity: 1, ease: "power4", scrollTrigger: {
-        trigger: "#timeline",
-        scrub: 1,
+    gsap.fromTo("#myProject", {opacity: 0, y: 70}, {opacity: 1, duration: 0.5,y: 0, scrollTrigger: {
+      trigger: "#projectIntro",
+      start: "center 70%",
     }})
   }, [])
 

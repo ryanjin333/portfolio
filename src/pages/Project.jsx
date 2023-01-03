@@ -14,9 +14,9 @@ const Project = ({data, id}) => {
     const {name, description, githubLink, splineLink, appStoreLink, playStoreLink} = data;
 
     useEffect(() => {
-        gsap.fromTo(`#app${id}`, {opacity: 0}, {opacity: 1, ease: "power4", scrollTrigger: {
+        gsap.fromTo(`#app${id}`, {opacity: 0, y: 70}, {opacity: 1, y: 0, duration: 0.5, scrollTrigger: {
             trigger: `#action${id}`,
-            scrub: 1,
+            start: "center 90%",
         }})
       }, [])
 

@@ -9,6 +9,8 @@ import Project from './pages/Project';
 import projectList from './data/projectList';
 import PageDivider from './components/PageDivider';
 import Loader from './pages/Loader';
+import Footer from './components/Footer';
+import Used from './pages/Used';
 
 
 function App() {
@@ -45,11 +47,11 @@ function App() {
         { projectList.map((data, i) => (
           <>
             <Project data={data} id={i} key={i}/>
-            { data.name !== "Day Tracker" &&
-              <PageDivider />
-            }
+            <PageDivider />
           </>
         ))}
+        <Used />
+        <Footer />
       </div>
       <Header />
       { loading &&

@@ -7,9 +7,9 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
 
     useEffect(() => {
-        gsap.fromTo("#paragraph", {opacity: 0}, {opacity: 1, ease: "power4", scrollTrigger: {
-            trigger: "#trig",
-            scrub: 1,
+        gsap.fromTo("#paragraph", {opacity: 0, y: 30}, {opacity: 1, y: 0, duration: 0.5, scrollTrigger: {
+            trigger: "#about",
+            start: "center 70%",
         }})
     }, [])
     return (
