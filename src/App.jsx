@@ -17,15 +17,14 @@ function App() {
   useEffect(() => {
     setLoading(true);
     document.body.style.overflow = "hidden";
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
     setTimeout(() => {
       setLoading(false);
       document.body.style.overflow = "visible";
     }, 8000)
   }, [])
-
-  useEffect(() => {
-    window.history.scrollRestoration = 'manual';
-  }, []);
 
   return (
     <>
