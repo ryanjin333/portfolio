@@ -16,10 +16,16 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
+    document.body.style.overflow = "hidden";
     setTimeout(() => {
       setLoading(false);
+      document.body.style.overflow = "visible";
     }, 8000)
   }, [])
+
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+  }, []);
 
   return (
     <>

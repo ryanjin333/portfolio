@@ -21,7 +21,7 @@ const ProjectIntro = () => {
               My 
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600'> Projects</span>
               <p className="text-gray-300 font-light text-lg my-8" id="timeline">2020 ~ present</p>
-              <p className="text-gray-200 font-light text-base italic mt-64" id="timeline">Tip: try moving around your cursor!</p>
+              <p className="text-gray-200 font-light text-base italic mt-64" id="timeline">Tip: try moving around your cursor for a cool effect!</p>
           </h1>
       </section>
   )
