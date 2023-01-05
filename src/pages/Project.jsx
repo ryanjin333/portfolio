@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import Spline from "@splinetool/react-spline";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Project = ({data, id}) => {
 
     const {name, description, githubLink, splineLink, appStoreLink, playStoreLink} = data;
+    const phone = useRef();
 
     useEffect(() => {
         gsap.fromTo(`#app${id}`, {opacity: 0, y: 70}, {opacity: 1, y: 0, duration: 0.5, scrollTrigger: {
@@ -19,6 +20,24 @@ const Project = ({data, id}) => {
             start: "center 90%",
         }})
       }, [])
+
+    useEffect(() => {
+        if (phone.current != null) {
+            
+            gsap.fromTo(phone.current.rotation, {x: -0.3, y: -0.5, z: -0.2}, { x: 0, y: 0.6, z: 0, scrollTrigger: {
+                trigger: `#action${id}`,
+                start: "top 90%",
+                end: "top 50%",
+                scrub: 3,
+            }})
+        }
+    }, [phone.current])
+
+    const onLoad = (spline) => {
+        const obj = spline.findObjectByName('iPhone 14 Pro');
+        phone.current = obj;
+        console.log(phone.current);
+    }
 
     return (
         <section className='w-screen h-screen flex items-center' id={`project${id}`}>
@@ -51,7 +70,7 @@ const Project = ({data, id}) => {
                     </a>
                 </div>
             </h1>
-            <Spline className="w-screen h-screen top-0 left-0" scene={splineLink} />
+            <Spline className="w-screen h-screen top-0 left-0" scene={splineLink} onLoad={onLoad} />
         </section>
     )
 }

@@ -28,7 +28,7 @@ const Home = () => {
     }, [])
     return (
         <section className='w-screen h-screen flex items-center' id="home">
-            <h1 className='text-gray-200 text-8xl font-extrabold m-32'>
+            <h1 className='text-gray-200 sm:text-6xl md:text-7xl lg:text-8xl font-extrabold m-32'>
                 <div id="greeting">Hi,</div>
                 <div id="name" className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600 h-28">I'm Ryan.</div>
                 <p id="experiance" className="font-normal text-lg my-2 ">Frontend App Developer</p>

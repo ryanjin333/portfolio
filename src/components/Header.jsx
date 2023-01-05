@@ -3,7 +3,7 @@ import githubLogo from '../assets/githubLogo.png'
 
 const Header = () => {
   return (
-    <header className="w-screen h-16 fixed top-0 left-0 px-32 backdrop-blur-lg flex justify-between items-center">
+    <header className="w-screen h-16 fixed top-0 left-0 sm:px-12 md:px-24 lg:px-32 backdrop-blur-lg flex justify-between items-center">
         <a href="#home" className='flex flex-row hover:opacity-70 duration-500'>
           <div className='text-white font-normal text-xl'>Ryan&nbsp;</div>
             <div className='text-white font-bold text-xl'>Jin</div>

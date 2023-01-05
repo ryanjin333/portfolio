@@ -1,5 +1,6 @@
 import { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
+import { Scrollbar } from 'smooth-scrollbar-react';
 import Home from './pages/home';
 import SceneEnvironment from './pages/SceneEnvironment';
 import About from './pages/About';
@@ -25,7 +26,7 @@ function App() {
     setTimeout(() => {
       setLoading(false);
       document.body.style.overflow = "visible";
-    }, 8000)
+    }, 1000)
   }, [])
 
   return (
@@ -37,6 +38,7 @@ function App() {
           </Suspense>
         </Canvas>
       </div>
+      <Scrollbar>
       <div className='absolute top-0 left-0'>
         <Home />
         <PageDivider />
@@ -54,6 +56,7 @@ function App() {
         <Footer />
       </div>
       <Header />
+      </Scrollbar>
       { loading &&
         <Loader />
       }

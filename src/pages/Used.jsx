@@ -16,7 +16,7 @@ const Used = () => {
 
   return (
     <div className='w-screen h-screen flex items-center text-gray-200' id="used">
-        <div className='ml-64' id='usedList'>
+        <div className='sm:ml-10 md:ml-12 lg:ml-64' id='usedList'>
           <h1 className='text-3xl font-semibold'>This website used: </h1>
           <div className='flex direction-row my-8 ml-1'>
             <div className='mr-32'>
