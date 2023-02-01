@@ -3,8 +3,9 @@ export default [{
     description: "An app to test how good your estimation skills are. Includes three different difficulties and each question is meant to test your problem solving at a competitive level.",
     githubLink: "https://github.com/ryanjin333/Fermi",
     splineLink: "https://prod.spline.design/EX00ZRIJ1-8cd2La/scene.splinecode",
-    appStoreLink: "",
-    playStoreLink: "",
+    appStoreLink: "https://apps.apple.com/app/fermi/id1662149326",
+    playStoreLink: "https://play.google.com/store/apps/details?id=com.huij.Fermi",
+    phoneTo: [-0.2, 0.8, 0.3],
 }, {
     name: "Memify",
     description: "Create and send funny memes to your friends and family, post it on social media, or keep it stored in your device.",
@@ -12,6 +13,7 @@ export default [{
     splineLink: "https://prod.spline.design/olXOp6gI-ewJfR6o/scene.splinecode",
     appStoreLink: "https://apps.apple.com/lk/app/memify-meme-generator/id1594777865",
     playStoreLink: "",
+    phoneTo: [-0.2, 0.4, 0],
 }, {
     name: "Day Tracker",
     description: "A simple app for my school to keep track of the program days. Useful if you have a full time schedule. (ex. IB, Band, etc)",
@@ -19,4 +21,5 @@ export default [{
     splineLink: "https://prod.spline.design/Ue4mWThLzc6pydS6/scene.splinecode",
     appStoreLink: "https://apps.apple.com/gb/app/day-tracker-for-nwss/id6444391672",
     playStoreLink: "https://play.google.com/store/apps/details?id=com.huij.dayTracker",
+    phoneTo: [-0.2, 0.8, 0.3],
 }];

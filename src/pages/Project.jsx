@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Project = ({data, id}) => {
 
-    const {name, description, githubLink, splineLink, appStoreLink, playStoreLink} = data;
+    const {name, description, githubLink, splineLink, appStoreLink, playStoreLink, phoneTo} = data;
     const phone = useRef();
 
     useEffect(() => {
@@ -24,11 +24,17 @@ const Project = ({data, id}) => {
     useEffect(() => {
         if (phone.current != null) {
             
-            gsap.fromTo(phone.current.rotation, {x: -0.3, y: -0.5, z: -0.2}, { x: 0, y: 0.6, z: 0, scrollTrigger: {
+            gsap.fromTo(phone.current.rotation, {x: -0.3, y: -0.5, z: -0.2}, { x: phoneTo[0], y: phoneTo[1], z: phoneTo[2], scrollTrigger: {
                 trigger: `#action${id}`,
                 start: "top 90%",
                 end: "top 50%",
-                scrub: 3,
+                scrub: 5,
+            }})
+            gsap.fromTo(phone.current, {alpha: 0}, { alpha: 1, scrollTrigger: {
+                trigger: `#action${id}`,
+                start: "top 90%",
+                end: "top 50%",
+                scrub: 5,
             }})
         }
     }, [phone.current])
