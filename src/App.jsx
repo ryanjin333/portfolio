@@ -26,7 +26,7 @@ function App() {
     setTimeout(() => {
       setLoading(false);
       document.body.style.overflow = "visible";
-    }, 1000)
+    }, 8000)
   }, [])
 
   return (
